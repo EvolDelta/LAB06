@@ -1,0 +1,12 @@
+<%- include("partials/header", { title, activePage }) %>
+<h1><%= title %></h1>
+<% if (!student) { %>
+  <p>❌ Student not found.</p>
+  <p><a href="/students">Back to list</a></p>
+<% } else { %>
+  <h2><%= student.name %></h2>
+  <p><strong>ID:</strong> <%= student.id %></p>
+  <p><strong>Major:</strong> <%= student.major %></p>
+  <p><a href="/students">Back to list</a></p>
+<% } %>
+<%- include("partials/footer") %>
